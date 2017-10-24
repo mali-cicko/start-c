@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 // Your code
 int* copy_arr(int* arr, int n) {
   int i;
@@ -50,21 +51,5 @@ void print_arr(int* arr, int n){
   printf("\n");
   
 }
-
-void bubble_sort(int* arr, int n){
-  int i, j, tmp;
-  for (i = n; i >= 0; i--){
-    for (j = 0; j < i; j++){
-	if (arr[j] > arr[j+1]){
-	  tmp = arr[j];
-	  arr[j] = arr[j+1];
-	  arr[j+1] = tmp;
-        }
-    }
-  }
-
-}
-
-
 
 #endif // __ARR_UTIL__H__
