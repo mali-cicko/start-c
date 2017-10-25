@@ -8,25 +8,26 @@
 // Your code
 int* copy_arr(int* arr, int n) {
   int i;
-  int* p = (int*) malloc(n * sizeof(int));
+  int* ret_val = (int*) malloc(n * sizeof(int));
   for (i = 0; i < n ; i++){
-    p[i] = arr[i];
+    ret_val[i] = arr[i];
   }
-  return p;
+  return ret_val;
 }
 
 int* i_random_arr_b(int n, int lw, int upp) {
-  int* p = (int*) malloc(n * sizeof(int));
-  srand(time(NULL));
+  int* dest = (int*) malloc(n * sizeof(int));
   int i;
+  
+  srand(time(NULL));
   
   if (upp < lw) {
     return NULL;
   }
   for (i = 0; i < n; i++){
-    p[i] = (rand() % (upp - lw)) + lw;
+    dest[i] = (rand() % (upp - lw)) + lw;
   }
-  return p;
+  return dest;
 }
 
 int* i_random_arr(int n){
@@ -37,9 +38,13 @@ int is_sorted(int* arr, int n){
   int i;
   for (i = 0; i < n-1; i++){
     if (arr[i] > arr[i+1]){
+      // If there is any two which breaks order
+      // return fail.
       return 1;
     }
   } 
+  
+  // Otherwise its sorted
   return 0;  
 }
 
