@@ -1,0 +1,32 @@
+Objective: Make lil' cicko best programmer ever!
+
+- Learn algorithms, analysis of algorithms and co through c. 
+- Learn data structures.
+- Develop right mindset related to programming, with leaning on math.
+
+- Implement everything as we progress. 
+
+
+- Learn to use (and about) Git, CMake, Refactoring, Clean Code and co.
+
+- Learn how to debug and track bugs and errors.
+
+
+
+So far: 
+
+Cicko is recalling very good what she learned before. Accepting new stuff
+with ease. So far we cover some general knowledge computer science and
+started with coding. So far she coded basic stuff to run/test sorting algorithms
+also she wrote basic mechanism to measure time. This is great for analysis of
+algorithms as we progress through Skiena. 
+
+Next:
+
+Talk about algorithm analysis and cover related Skienas exercises.
+Learn about refactoring and technical aspects of programming.
+	- Change code to look better (increase maintability)
+	- Refactor/enhance functions
+	- Write comments. 
+
+Learn about CMake and Git. Basic stuff for starters.
