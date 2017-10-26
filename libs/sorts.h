@@ -6,9 +6,27 @@
 
 /// @brief Implementation of various sorts in C.
 
-// @todo Implement swap function
+
 // @todo Enhance sorts so they can sort everything.
 // @todo Refactor code and add comments.
+
+#include<stdlib.h>
+#include<string.h>
+
+void swap(void* first, void* second, unsigned size){
+  char* first_1 = (char*)first;
+  char* second_1 = (char*)second;
+  char* tmp = (char*) malloc(size);
+
+  memcpy(tmp, first_1, size);
+  memcpy(first_1, second_1, size);
+  memcpy(second_1, tmp, size);
+
+  free(tmp);
+
+ }
+
+
 
 // Bubble sort implementation
 // @param arr - array to be sorted
@@ -19,9 +37,7 @@ void bubble_sort(int* arr, int n){
   for (i = n; i >= 0; i--){
     for (j = 0; j < i; j++){
 	if (arr[j] > arr[j+1]){
-	  tmp = arr[j];
-	  arr[j] = arr[j+1];
-	  arr[j+1] = tmp;
+	    swap(&arr[j], &arr[j+1], sizeof(int));
         }
     }
   }
@@ -36,9 +52,7 @@ void selection_sort(int* arr, int n) {
 	  min = j;
 	}
     }
-    tmp = arr[i];
-    arr[i] = arr[min];
-    arr[min] = tmp;
+    swap(&arr[i], &arr[min], sizeof(int));
 
   }
 
